@@ -27,8 +27,7 @@ Cuando el usuario adivina el número, el programa muestra cuántos intentos tom�
 2. Abre una terminal y navega hasta la carpeta del proyecto.  
 3. Compila las clases:  
    ```bash
-   cd src
-   javac clases/AdivinaNumero.java clases/Aplicacion.java
+   javac src/clases/AdivinaNumero.java src/clases/Aplicacion.java
 4. Ejecutar el programa:
     ```bash
     java -cp src clases.Aplicacion

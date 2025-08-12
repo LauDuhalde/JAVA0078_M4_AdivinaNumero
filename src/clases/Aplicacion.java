@@ -22,22 +22,27 @@ public class Aplicacion {
 			// Lee el número que el usuario ingresa
 			int num = sc.nextInt();
 			
-			// Guarda el intento en la lista
-			intentos.add(num);
+			if(num > 0 && num <101) { //Solo se consideran los intentos con números válidos entre 1 y 100
 			
-			// Llama al método compararNumeros para verificar si el intento es correcto
-			// Si devuelve false, significa que el usuario adivinó
-			reintentar = AdivinaNumero.compararNumeros(num, aleatorio);
-			if(!reintentar) {
-				// Muestra cuántos intentos tomó adivinarlo
-				System.out.println("Te tomó "+intentos.size()+" veces adivinar el número");
+				// Guarda el intento en la lista
+				intentos.add(num);
+			
+				// Llama al método compararNumeros para verificar si el intento es correcto
+				// Si devuelve false, significa que el usuario adivinó
+				reintentar = AdivinaNumero.compararNumeros(num, aleatorio);
+				if(!reintentar) {
+					// Muestra cuántos intentos tomó adivinarlo
+					System.out.println("Te tomó "+intentos.size()+" veces adivinar el número");
 				
-				// Construye un mensaje con todos los intentos realizados
-				String mensaje="";
-				for (Integer intento : intentos) {
-					mensaje += intento + " ";
+					// Construye un mensaje con todos los intentos realizados
+					String mensaje="";
+					for (Integer intento : intentos) {
+						mensaje += intento + " ";
+					}
+					System.out.println(mensaje);
 				}
-				System.out.println(mensaje);
+			}else {
+				System.out.println("Intento inválido.\nPor favor, ingresa un número entre 1 y 100");
 			}
 			
 		} while(reintentar); // Repite mientras no se adivine el número

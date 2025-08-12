@@ -8,7 +8,7 @@ Este es un pequeño proyecto en Java que implementa un juego para adivinar un n�
 
 El programa genera un número aleatorio entre 1 y 100 y le pide al usuario que intente adivinarlo.  
 Después de cada intento, el programa indica si el número ingresado es mayor o menor que el número secreto, ayudando al usuario a acercarse a la respuesta correcta.  
-Cuando el usuario adivina el número, el programa muestra cuántos intentos tomó y la lista completa de números ingresados.
+Cuando el usuario adivina el número, el programa muestra cuántos intentos tomó y la lista completa de números válidos ingresados.
 
 ---
 
